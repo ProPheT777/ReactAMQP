@@ -1,5 +1,5 @@
 build:
-  image: php:$$PHP_VERSION
+  image: php:5.5-cli
   commands:
     - curl -sS https://getcomposer.org/installer | php
     - php composer.phar install --prefer-dist --no-interaction --no-progress
@@ -8,10 +8,3 @@ build:
 compose:
   redis:
     image: redis:latest
-
-matrix:
-  PHP_VERSION:
-    - 5.4-cli
-    - 5.5-cli
-    - 5.6-cli
-    - 7.0-cli
