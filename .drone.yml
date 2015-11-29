@@ -4,7 +4,3 @@ build:
     - curl -sS https://getcomposer.org/installer | php
     - php composer.phar install --prefer-dist --no-interaction --no-progress
     - ./vendor/bin/phpunit
-
-compose:
-  redis:
-    image: redis:latest
