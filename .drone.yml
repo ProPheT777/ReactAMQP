@@ -1,3 +1,5 @@
-image: dockerfile/nginx
-script:
-- echo hello world
+image: php:5.5-cli
+scripts:
+  - curl -sS https://getcomposer.org/installer | php
+  - php composer.phar install --prefer-dist --no-interaction --no-progress
+  - ./vendor/bin/phpunit
