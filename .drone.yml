@@ -1,6 +1,3 @@
-build:
-  image: drone/golang:1.5
-  commands:
-    - curl -sS https://getcomposer.org/installer | php
-    - php composer.phar install --prefer-dist --no-interaction --no-progress
-    - ./vendor/bin/phpunit
+image: dockerfile/nginx
+script:
+- echo hello world
